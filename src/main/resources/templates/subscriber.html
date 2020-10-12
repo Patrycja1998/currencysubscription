@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Subscription</h1>
+
+<form th:action="@{/add-subscriber}" th:object="${newSubscriber}" method="post">
+    <p>Name: <input type="text" required th:field="*{name}" ></p>
+    <p>Mail: <input type="text" required th:field="*{mail}"></p>
+    <p>Frequency: <select required th:field="*{frequency}">
+        <option th:value="hourly" th:text="hourly"></option>
+        <option th:value="daily" th:text="daily"></option>
+        <option th:value="everyWeek" th:text="everyWeek"></option>
+        <option th:value="everyMonth" th:text="everyMonth"></option>
+    </select></p>
+    <p>Base currency: <select required th:field="*{baseCurrency}">
+        <option th:value="CAD" th:text="CAD"></option>
+        <option th:value="HKD" th:text="HKD"></option>
+        <option th:value="ISK" th:text="ISK"></option>
+        <option th:value="PHP" th:text="PHP"></option>
+        <option th:value="HUF" th:text="HUF"></option>
+        <option th:value="CZK" th:text="CZK"></option>
+        <option th:value="AUD" th:text="AUD"></option>
+        <option th:value="RON" th:text="RON"></option>
+        <option th:value="SEK" th:text="SEK"></option>
+        <option th:value="IDR" th:text="IDR"></option>
+        <option th:value="INR" th:text="INR"></option>
+        <option th:value="BRL" th:text="BRL"></option>
+        <option th:value="RUB" th:text="RUB"></option>
+        <option th:value="HRK" th:text="HRK"></option>
+        <option th:value="JPY" th:text="JPY"></option>
+        <option th:value="THB" th:text="CHF"></option>
+        <option th:value="SGD" th:text="SGD"></option>
+        <option th:value="PLN" th:text="PLN"></option>
+        <option th:value="BGN" th:text="BGN"></option>
+        <option th:value="TRY" th:text="TRY"></option>
+        <option th:value="CNY" th:text="NOK"></option>
+        <option th:value="NZD" th:text="NZD"></option>
+        <option th:value="ZAR" th:text="ZAR"></option>
+        <option th:value="USD" th:text="USD"></option>
+        <option th:value="MXN" th:text="MXN"></option>
+        <option th:value="ILS" th:text="ILS"></option>
+        <option th:value="GBP" th:text="GBP"></option>
+        <option th:value="KRW" th:text="KRW"></option>
+        <option th:value="MYR" th:text="MYR"></option>
+
+    </select></p>
+
+    <p> <input type="submit" value="add new subscriber"></p>
+</form>
+
+</body>
+</html>
